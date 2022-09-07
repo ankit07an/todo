@@ -1,0 +1,162 @@
+.todo-main{
+    /* position: fixed; */
+    margin: 0%;
+    padding: 0%;
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+
+
+    background: linear-gradient(301deg, #2f2898, #6bd7f7, #222cb0);
+    background-size: 600% 600%;
+
+    -webkit-animation: todo 5s ease infinite;
+    -moz-animation: todo 5s ease infinite;
+    animation: todo 5s ease infinite;
+}
+
+@-webkit-keyframes todo {
+    0%{background-position:34% 0%}
+    50%{background-position:67% 100%}
+    100%{background-position:34% 0%}
+}
+@-moz-keyframes todo {
+    0%{background-position:34% 0%}
+    50%{background-position:67% 100%}
+    100%{background-position:34% 0%}
+}
+@keyframes todo {
+    0%{background-position:34% 0%}
+    50%{background-position:67% 100%}
+    100%{background-position:34% 0%}
+}
+
+.add-items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    height: 2.3rem;
+    width:17em;
+}
+input{
+    border: 0;
+    outline: 0;
+    padding-left: 0.2rem;
+    /* padding-top: 0.7rem; */
+    border: none;
+}
+
+input:focus {
+    outline:none!important;
+}
+.fa-plus-icn{
+    padding-right: .3rem;
+
+
+
+}
+.itemlist-main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+    background-color: rgb(67, 208, 215);
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    height: 2.3rem;
+    min-width: 17em;
+    width:auto;
+    text-align: center;
+    
+}
+.itemlist-main:hover{
+    background-color: white;
+    color: black;
+}
+h3{
+    margin-left: 1.2em;
+    margin-top: 0.4em;
+
+}
+.fa-trash-icn{
+    margin-top: 0.65em;
+    margin-right: 1.7em;
+    margin-left: 1em;
+}
+.caption-task{
+    margin-top: .5em;
+}
+.btn-btm{
+    margin-top: .5em;
+}
+.todo-top-cap{
+    margin-top: 1.5em;
+}
+.bottom-btn {
+    margin-top: 0.3em;
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.bottom-btn:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.bottom-btn:active {
+    color: #000
+}
+
+.bottom-btn:active:after {
+    background: transparent;
+}
+
+.bottom-btn:hover:before {
+    opacity: 1;
+}
+
+.bottom-btn:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
